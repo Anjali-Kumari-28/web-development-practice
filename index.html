@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FilmyGossip</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class='parent'>
-        <div class='child'>child 1</div>
-        <div class='child'>child 2</div>
-      </div><br>
-      <div class="float-parent-element">
-        <div class="float-child-element">
-          <div class="red">Float Column 1</div>
-        </div>
-        <div class="float-child-element">
-          <div class="yellow">Float Column 2</div>
-        </div>
-      </div><br>
-      <div class="flex-parent-element">
-        <div class="flex-child-element magenta">Flex Column 1</div>
-        <div class="flex-child-element green">Flex Column 2</div>
-      </div>
-      
-      <div class="grid-container-element">
-        <div class="grid-child-element purple">Grid Column 1</div>
-        <div class="grid-child-element green">Grid Column 2</div>
+
+    <h1 id="heading">Welcome to FilmyGossip</h1>
+
+    <!-- Search bar -->
+    <div id="search">
+        <form method="GET" action="details.html">
+            <input type="text" placeholder="Search for a movie" name="movie" required>
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
     </div>
 
-    
+    <!-- About -->
+    <div id="container">
+        <h2><u>About FilmyGossip</u></h2>
+        <p>
+            FilmyGossip provides trendy updates and reviews of the latest movies. Register to get updates in your mail!
+            <br><br>
+            <button>Register</button>
+        </p>
+    </div>
+
+    <footer>
+        <p>FilmyGossip <span>&copy; 2019</span></p>
+        <p><u>Contact Us:</u> filmyupdates@gossip.com</p>
+        <p id="footer">** Disclaimer: For educational purposes only. Do not attempt attacks on real websites. **</p>
+    </footer>
+
 </body>
 </html>

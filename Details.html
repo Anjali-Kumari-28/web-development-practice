@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <h1 id="heading">FilmyGossip - Movie Details</h1>
+
+    <div id="container">
+        <h2><u>Movie You Searched:</u></h2>
+        <h3 id="movieDetails">Loading...</h3>
+    </div>
+
+    <script>
+        // Get the 'movie' parameter from URL and display it
+        const urlParams = new URLSearchParams(window.location.search);
+        const movie = urlParams.get("movie");
+
+        if (movie) {
+            document.getElementById("movieDetails").textContent = movie;
+        } else {
+            document.getElementById("movieDetails").textContent = "No movie name provided.";
+        }
+    </script>
+
+</body>
+</html>
