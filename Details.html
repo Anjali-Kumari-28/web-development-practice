@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Movie Details</title>
     <link rel="stylesheet" href="style1.css">
-</head>
-<body>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        #container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #heading {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .go-back {
+            display: block;
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
     <h1 id="heading">FilmyGossip - Movie Details</h1>
 
     <div id="container">
@@ -14,17 +40,15 @@
         <h3 id="movieDetails">Loading...</h3>
     </div>
 
+    <a href="index.html" class="go-back">← Go Back to Home</a>
+
     <script>
-        // Get the 'movie' parameter from URL and display it
         const urlParams = new URLSearchParams(window.location.search);
         const movie = urlParams.get("movie");
-
-        if (movie) {
-            document.getElementById("movieDetails").textContent = movie;
-        } else {
-            document.getElementById("movieDetails").textContent = "No movie name provided.";
-        }
+        document.getElementById("movieDetails").textContent = movie || "No movie name provided.";
     </script>
+    <script src="style.js"></script>
 
 </body>
+
 </html>

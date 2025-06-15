@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Review - FilmyGossip</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .review-box {
+            max-width: 500px;
+            margin: 40px auto 0 auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .center-button {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .go-back {
+            display: block;
+            text-align: center;
+            margin: 30px 0 20px 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-heading" style="text-align:center;">Submit Movie Review</h1>
+
+    <div class="review-box">
+        <label for="name">Movie Name:</label><br>
+        <textarea id="name" rows="1"></textarea><br><br>
+
+        <label for="review">Your Review:</label><br>
+        <textarea id="review" rows="5"></textarea><br><br>
+
+        <div class="center-button">
+            <button onclick="submitReview()">Submit</button>
+        </div>
+
+        <p id="content"></p>
+    </div>
+
+    <a href="index.html" class="go-back">← Go Back to Home</a>
+
+    <footer>
+        <p>FilmyGossip &copy; 2019</p>
+        <p><u>Contact Us:</u> filmyupdates@gossip.com</p>
+        <p class="disclaimer">** Disclaimer: Educational purpose only. **</p>
+    </footer>
+
+    <script>
+        function submitReview() {
+            const name = document.getElementById("name").value;
+            document.getElementById("content").innerText = "Review submitted for movie: " + name;
+        }
+    </script>
+    <script src="style.js"></script>
+
+</body>
+</html>

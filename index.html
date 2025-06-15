@@ -4,43 +4,48 @@
     <meta charset="UTF-8">
     <title>FilmyGossip</title>
     <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         function register() {
-            alert('Registered')
-        }      
+            alert('Registered');
+        }
     </script>
 </head>
-<body>
-
+<body id="page">
     <h1 id="heading">Welcome to FilmyGossip</h1>
 
-    <!-- Search bar -->
     <div id="search">
         <form method="GET" action="details.html">
             <input type="text" placeholder="Search for a movie" name="movie" required>
-            <button type="submit">
-                <i class="fa fa-search"></i>
-            </button>
+            <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
 
-    <!-- About -->
     <div id="container">
-        <h2><u>About FilmyGossip</u></h2>
-        <p>
+        <h2 id="text"><u>About FilmyGossip</u></h2>
+        <p id="text">
             FilmyGossip provides trendy updates and reviews of the latest movies. Register to get updates in your mail!
             <br><br>
             <button onclick="register()">Register</button>
         </p>
+        <p>
+            <a href="review.html" class="feedback-button">Give Feedback</a> |
+            <a href="customize.html" class="feedback-button">Customize Site</a>
+        </p>
     </div>
 
     <footer>
-        <p>FilmyGossip <span>&copy; 2019</span></p>
+        <p>FilmyGossip &copy; 2019</p>
         <p><u>Contact Us:</u> filmyupdates@gossip.com</p>
         <p id="footer">** Disclaimer: For educational purposes only. Do not attempt attacks on real websites. **</p>
     </footer>
+
+    <script>
+        document.getElementById("page").style.backgroundColor = localStorage.getItem("bgcolor");
+        document.getElementById("page").style.color = localStorage.getItem("textcolor");
+        document.getElementById("page").style.fontSize = localStorage.getItem("fontsize");
+    </script>
+    <script src="style.js"></script>
 
 </body>
 </html>

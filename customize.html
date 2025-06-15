@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize Appearance</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #container input {
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+            display: inline-block;
+        }
+
+        #container button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #heading {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body id="page">
+    <h1 id="heading">Customize Website Appearance</h1>
+
+    <div id="container">
+        <input type="text" id="bgcolor" placeholder="Enter background color">
+        <input type="text" id="textcolor" placeholder="Enter text color">
+        <input type="text" id="fontsize" placeholder="Enter font size in px">
+        <br>
+        <button onclick="applyStyles()">Apply</button>
+    </div>
+
+    <p style="text-align: center;">Go back to <a href="index.html">Home</a></p>
+
+    <script>
+        function applyStyles() {
+            localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+            localStorage.setItem("textcolor", document.getElementById("textcolor").value);
+            localStorage.setItem("fontsize", document.getElementById("fontsize").value);
+            alert("Saved! Go back to home page to see changes.");
+        }
+    </script>
+    <script src="style.js"></script>
+
+</body>
+</html>
